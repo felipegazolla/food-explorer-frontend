@@ -1,52 +1,71 @@
-import { createGlobalStyle } from 'styled-components'
-import { DEVICE_BREAKPOINTS } from './deviceBreakpoints'
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  :root {
-    font-size: 16px;
-
-    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
-      
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-  }
 
-  body {
-    background: ${({ theme }) => theme.COLORS.DARK_400};
-    color: ${({ theme }) => theme.COLORS.LIGHT_100};
-    font-family: 'Poppins', serif;
-    outline: none;
+    :root {
+        font-size: 62.5%;
+    }
 
-    -webkit-font-smoothing: antialiased;
-  }
+    body {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+        color: ${({ theme }) => theme.COLORS.WHITE};
 
-  input {
-    font-family: 'Roboto', serif;
-    outline: none;
-  }
+        -webkit-font-smoothing: antialiased;
 
-  button, a {
-    font-family: 'Poppins', serif;
-    outline: none;
-  }
+        *::-webkit-scrollbar {
+            width: 22px;
+            height: 22px;
+            border-radius: 9999px;
+        }
 
-  a {
-    text-decoration: none;
-  }
+        *::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
 
-  button, a {
-    cursor: pointer;
-    transition: filter 0.2s;
-  }
+        *::-webkit-scrollbar-thumb {
+            width: 6px;
+            background-color: transparent;
+            border-radius: 80px;
+            box-shadow: inset 0 0 0px 6px ${({ theme }) => theme.COLORS.BLUE};
+            border: solid 10px transparent;
+        }
 
-  button:hover, a:hover {
-    filter: brightness(0.9);
-  }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
 
-  `
+        input[type=number] {
+        -moz-appearance: textfield;
+        }   
+    }
 
+    body, input, textarea {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        outline: none;
+    }
+
+    button {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button, a {
+        cursor: pointer;
+        transition: filter 0.2s;
+    }
+
+    button:hover, a:hover {
+        filter: brightness(0.9);
+    }
+`;

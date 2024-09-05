@@ -133,8 +133,8 @@ export function Orders() {
                                 </table>
                             </Table>
                         </Content>
-                </Container>
                     <Footer />
+                </Container>
         </ThemeProvider>
     );
 }

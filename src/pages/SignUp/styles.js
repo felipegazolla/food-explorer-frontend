@@ -39,7 +39,7 @@ export const Form = styled.form`
     justify-content: center;
     align-items: left;
     
-    max-width: 47.6rem;
+    max-width: 42.6rem;
     width: 100%;
     
     padding: 6.4rem;
